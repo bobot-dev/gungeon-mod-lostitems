@@ -1,0 +1,783 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6AEA5FA6-0308-4DEE-9432-F22D61AAF54D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LostItems</RootNamespace>
+    <AssemblyName>LostItems</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\OneDrive\Desktop\dependencies\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp.Base.mm, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\OneDrive\Desktop\dependencies\Assembly-CSharp.Base.mm.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour">
+      <HintPath>..\..\..\OneDrive\Desktop\dependencies\MonoMod.RuntimeDetour.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Utils">
+      <HintPath>..\..\..\OneDrive\Desktop\dependencies\MonoMod.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\OneDrive\Desktop\dependencies\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\OneDrive\Desktop\dependencies\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule.Base.mm, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\OneDrive\Desktop\dependencies\UnityEngine.CoreModule.Base.mm.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\OneDrive\Desktop\dependencies\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\OneDrive\Desktop\dependencies\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\OneDrive\Desktop\dependencies\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticlesLegacyModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\OneDrive\Desktop\dependencies\UnityEngine.ParticlesLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\OneDrive\Desktop\dependencies\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Apache.cs" />
+    <Compile Include="BreachRoomController.cs" />
+    <Compile Include="d2\BotGhost.cs" />
+    <Compile Include="Hunts.cs" />
+    <Compile Include="LostAltSkin.cs" />
+    <Compile Include="Class2.cs" />
+    <Compile Include="Class3.cs" />
+    <Compile Include="BreachRoomShrine.cs" />
+    <Compile Include="RuinousEffigyBeam.cs" />
+    <Compile Include="MoreBreachShrine.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="MagicSpriteStuff.cs" />
+    <Compile Include="MyItem.cs" />
+    <Compile Include="Enemies\CustomGun\GunConfigManager.cs" />
+    <Compile Include="CustomTrackedStatsManager.cs" />
+    <Compile Include="CustomTrackedStats.cs" />
+    <Compile Include="GunBuffs.cs" />
+    <Compile Include="CustomGungeonFlagsManager.cs" />
+    <Compile Include="CustomDungeonFlags.cs" />
+    <Compile Include="Enemies\TestOverrideBehavior.cs" />
+    <Compile Include="EnemyAPI\Hooks.cs" />
+    <Compile Include="EnemyAPI\OverrideBehavior.cs" />
+    <Compile Include="EnemyAPI\Tools.cs" />
+    <Compile Include="NuclearThrone\Character Ablilities\AbilityEyes.cs" />
+    <Compile Include="NuclearThrone\Character Ablilities\AbilityChicken.cs" />
+    <Compile Include="NuclearThrone\Character Ablilities\SnareGoop.cs" />
+    <Compile Include="NuclearThrone\RebelScarfAttachmentDoer.cs" />
+    <Compile Include="NuclearThrone\Mutations\MutaionWait.cs" />
+    <Compile Include="synergy stuff\AdvancedDualWieldSynergyProcessor.cs" />
+    <Compile Include="Enemies\CustomGun\CustomGun.cs" />
+    <Compile Include="Gundertale.cs" />
+    <Compile Include="RuinousEffigy.cs" />
+    <Compile Include="Ping.cs" />
+    <Compile Include="TestPassive.cs" />
+    <Compile Include="NuclearThrone\Weapons\Bullet\AssaultRifle.cs" />
+    <Compile Include="NuclearThrone\Weapons\Bullet\SmartGun.cs" />
+    <Compile Include="NuclearThrone\Weapons\Bullet\Revolver.cs" />
+    <Compile Include="NuclearThrone\Weapons\NTWeaponHelper.cs" />
+    <Compile Include="TestActive.cs" />
+    <Compile Include="NuclearThrone\Character Ablilities\AbilityYV.cs" />
+    <Compile Include="NuclearThrone\NTModeController.cs" />
+    <Compile Include="NuclearThrone\CrownVault.cs" />
+    <Compile Include="NuclearThrone\ConfigManager.cs" />
+    <Compile Include="NuclearThrone\ProtoChest.cs" />
+    <Compile Include="NuclearThrone\LoopController.cs" />
+    <Compile Include="NuclearThrone\Mutations\MutaionMind.cs" />
+    <Compile Include="NuclearThrone\Mutations\MutaionGuts.cs" />
+    <Compile Include="tools.cs" />
+    <Compile Include="hooks.cs" />
+    <Compile Include="Junkan_B.cs" />
+    <Compile Include="BalencePath.cs" />
+    <Compile Include="GungeonAPI\ResourceExtractor.cs" />
+    <Compile Include="GungeonAPI\SimpleShrine.cs" />
+    <Compile Include="GungeonAPI\NuclearInteractable.cs" />
+    <Compile Include="GungeonAPI\NPCBuilder.cs" />
+    <Compile Include="GungeonAPI\DungeonHandler.cs" />
+    <Compile Include="GungeonAPI\DungeonHooks.cs" />
+    <Compile Include="GungeonAPI\GungeonAPI.cs" />
+    <Compile Include="GungeonAPI\HitboxMonitor.cs" />
+    <Compile Include="GungeonAPI\OfficialFlows.cs" />
+    <Compile Include="GungeonAPI\RoomFactory.cs" />
+    <Compile Include="GungeonAPI\SampleFlow.cs" />
+    <Compile Include="GungeonAPI\ShrineFactory.cs" />
+    <Compile Include="GungeonAPI\ShrineFakePrefab.cs" />
+    <Compile Include="GungeonAPI\ShrineFakePrefabHooks.cs" />
+    <Compile Include="GungeonAPI\SimpleInteractable.cs" />
+    <Compile Include="GungeonAPI\StaticReferences.cs" />
+    <Compile Include="GungeonAPI\TextureStitcher.cs" />
+    <Compile Include="GungeonAPI\Tools.cs" />
+    <Compile Include="ItemAPI\CompanionBuilder.cs" />
+    <Compile Include="ItemAPI\CustomSynergies.cs" />
+    <Compile Include="ItemAPI\ExampleActive.cs" />
+    <Compile Include="ItemAPI\ExampleCompanion.cs" />
+    <Compile Include="ItemAPI\ExamplePassive.cs" />
+    <Compile Include="ItemAPI\FakePrefab\FakePrefab.cs" />
+    <Compile Include="ItemAPI\FakePrefab\FakePrefabHooks.cs" />
+    <Compile Include="ItemAPI\ItemBuilder.cs" />
+    <Compile Include="ItemAPI\ResourceExtractor.cs" />
+    <Compile Include="ItemAPI\SpriteBuilder.cs" />
+    <Compile Include="Kunia.cs" />
+    <Compile Include="ChlorophyteRounds.cs" />
+    <Compile Include="LostGunAlt.cs" />
+    <Compile Include="NuclearThrone\Character Ablilities\AbilityPlant.cs" />
+    <Compile Include="NuclearThrone\Character Ablilities\AbilityRebel.cs" />
+    <Compile Include="NuclearThrone\Character Ablilities\AbilityRogue.cs" />
+    <Compile Include="NuclearThrone\Character Ablilities\AbilityCrystal.cs" />
+    <Compile Include="NuclearThrone\Character Ablilities\AbilitySteroids.cs" />
+    <Compile Include="NuclearThrone\Character Ablilities\AbilityMelting.cs" />
+    <Compile Include="NuclearThrone\CharacterShrine.cs" />
+    <Compile Include="NuclearThrone\Mutations\MutaionSpirit.cs" />
+    <Compile Include="NuclearThrone\Mutations\MutaionLucky.cs" />
+    <Compile Include="NuclearThrone\Mutations\MutaionExplosive.cs" />
+    <Compile Include="NuclearThrone\Mutations\MutaionMuscle.cs" />
+    <Compile Include="NuclearThrone\Mutations\MutaionFeet.cs" />
+    <Compile Include="NuclearThrone\Mutations\MutaionEuphoria.cs" />
+    <Compile Include="NuclearThrone\Mutations\MutaionPaw.cs" />
+    <Compile Include="NuclearThrone\Mutations\MutaionBlood.cs" />
+    <Compile Include="NuclearThrone\Mutations\MutaionStomach.cs" />
+    <Compile Include="NuclearThrone\Mutations\MutaionWrists.cs" />
+    <Compile Include="NuclearThrone\Mutations\MutaionSkin.cs" />
+    <Compile Include="NuclearThrone\Mutations\MutaionMelee.cs" />
+    <Compile Include="NuclearThrone\Mutations\MutaionFace.cs" />
+    <Compile Include="NuclearThrone\Mutations\MutaionEyes.cs" />
+    <Compile Include="NuclearThrone\Mutations\MutaionWish.cs" />
+    <Compile Include="NuclearThrone\Mutations\MutaionTeeth.cs" />
+    <Compile Include="NuclearThrone\Mutations\MutaionTriggerFingers.cs" />
+    <Compile Include="NuclearThrone\Mutations\MutaionStress.cs" />
+    <Compile Include="NuclearThrone\Mutations\MutaionShell.cs" />
+    <Compile Include="NuclearThrone\Mutations\MutaionEnergy.cs" />
+    <Compile Include="NuclearThrone\Mutations\MutaionBullet.cs" />
+    <Compile Include="NuclearThrone\NuclearShrine.cs" />
+    <Compile Include="NuclearThrone\WeaponTypes.cs" />
+    <Compile Include="NuclearThrone\Mutations\MutaionBolt.cs" />
+    <Compile Include="NuclearThrone\NuclearTalisman.cs" />
+    <Compile Include="NuclearThrone\Character Ablilities\AbilityRobot.cs" />
+    <Compile Include="Shine.cs" />
+    <Compile Include="ScatedyCat.cs" />
+    <Compile Include="NuclearThrone\Character Ablilities\RebelGun.cs" />
+    <Compile Include="StarterGun.cs" />
+    <Compile Include="BanGun.cs" />
+    <Compile Include="BanGunProjectile.cs" />
+    <Compile Include="BlessedOrb.cs" />
+    <Compile Include="bob.cs" />
+    <Compile Include="Bond.cs" />
+    <Compile Include="Children.cs" />
+    <Compile Include="BabyGoodMistake.cs" />
+    <Compile Include="CosmicSludge.cs" />
+    <Compile Include="TestGun.cs" />
+    <Compile Include="syntest.cs" />
+    <Compile Include="Demonitization.cs" />
+    <Compile Include="altist items\CNerfGun2.cs" />
+    <Compile Include="altist items\Revenge.cs" />
+    <Compile Include="Test.cs" />
+    <Compile Include="altist items\CoopTest.cs" />
+    <Compile Include="JunkHeart.cs" />
+    <Compile Include="MistakeCharm.cs" />
+    <Compile Include="RetoStarterOld.cs" />
+    <Compile Include="RetoStarter.cs" />
+    <Compile Include="RoboticMuncher.cs" />
+    <Compile Include="SynergyManagerBaseGame.cs" />
+    <Compile Include="SynergyManagerLost.cs" />
+    <Compile Include="MopController.cs" />
+    <Compile Include="NailProjectile.cs" />
+    <Compile Include="LootBox.cs" />
+    <Compile Include="altist items\CNerfGun.cs" />
+    <Compile Include="SaiGun.cs" />
+    <Compile Include="LostRobe.cs" />
+    <Compile Include="LostOrb.cs" />
+    <Compile Include="LostItemsMod.cs" />
+    <Compile Include="LostGun.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="sprites\wip.png" />
+    <EmbeddedResource Include="sprites\cloak.png" />
+    <EmbeddedResource Include="sprites\Loot_Box.png" />
+    <EmbeddedResource Include="sprites\junk_heart.png" />
+    <EmbeddedResource Include="sprites\blessed_orb.png" />
+    <EmbeddedResource Include="sprites\bond.png" />
+    <EmbeddedResource Include="sprites\cheesy_bullets.png" />
+    <EmbeddedResource Include="sprites\coolglasses.png" />
+    <EmbeddedResource Include="sprites\mistakecharm.png" />
+    <EmbeddedResource Include="sprites\shadow_relic.png" />
+    <EmbeddedResource Include="sprites\retostarter.png" />
+    <EmbeddedResource Include="sprites\reto_junkan.png" />
+    <EmbeddedResource Include="sprites\shades.png" />
+    <EmbeddedResource Include="sprites\pro_tip_bip_001.png" />
+    <EmbeddedResource Include="sprites\robot_muncher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="sprites\Shadow_Relic_001.png" />
+    <EmbeddedResource Include="sprites\Shadow_Relic_002.png" />
+    <EmbeddedResource Include="sprites\Shadow_Relic_003.png" />
+    <EmbeddedResource Include="sprites\Shadow_Relic_004.png" />
+    <EmbeddedResource Include="sprites\Shadow_Relic_005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="sprites\altist_active.png" />
+    <EmbeddedResource Include="sprites\lonliness.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="sprites\Pets\mistake\Idle_back\mistake_pet_idle_001.png" />
+    <EmbeddedResource Include="sprites\Pets\mistake\Idle_back\mistake_pet_idle_002.png" />
+    <EmbeddedResource Include="sprites\Pets\mistake\Idle_back\mistake_pet_idle_003.png" />
+    <EmbeddedResource Include="sprites\Pets\mistake\Idle_back\mistake_pet_idle_004.png" />
+    <EmbeddedResource Include="sprites\Pets\mistake\Idle_back\mistake_pet_idle_005.png" />
+    <EmbeddedResource Include="sprites\Pets\mistake\Idle_back\mistake_pet_idle_006.png" />
+    <EmbeddedResource Include="sprites\Pets\mistake\Idle_front\mistake_pet_idle_001.png" />
+    <EmbeddedResource Include="sprites\Pets\mistake\Idle_front\mistake_pet_idle_002.png" />
+    <EmbeddedResource Include="sprites\Pets\mistake\Idle_front\mistake_pet_idle_003.png" />
+    <EmbeddedResource Include="sprites\Pets\mistake\Idle_front\mistake_pet_idle_004.png" />
+    <EmbeddedResource Include="sprites\Pets\mistake\Idle_front\mistake_pet_idle_005.png" />
+    <EmbeddedResource Include="sprites\Pets\mistake\Idle_front\mistake_pet_idle_006.png" />
+    <EmbeddedResource Include="sprites\Pets\mistake\Idle_left\mistake_pet_idle_001.png" />
+    <EmbeddedResource Include="sprites\Pets\mistake\Idle_left\mistake_pet_idle_002.png" />
+    <EmbeddedResource Include="sprites\Pets\mistake\Idle_left\mistake_pet_idle_003.png" />
+    <EmbeddedResource Include="sprites\Pets\mistake\Idle_left\mistake_pet_idle_004.png" />
+    <EmbeddedResource Include="sprites\Pets\mistake\Idle_left\mistake_pet_idle_005.png" />
+    <EmbeddedResource Include="sprites\Pets\mistake\Idle_left\mistake_pet_idle_006.png" />
+    <EmbeddedResource Include="sprites\Pets\mistake\Idle_right\mistake_pet_idle_001.png" />
+    <EmbeddedResource Include="sprites\Pets\mistake\Idle_right\mistake_pet_idle_002.png" />
+    <EmbeddedResource Include="sprites\Pets\mistake\Idle_right\mistake_pet_idle_003.png" />
+    <EmbeddedResource Include="sprites\Pets\mistake\Idle_right\mistake_pet_idle_004.png" />
+    <EmbeddedResource Include="sprites\Pets\mistake\Idle_right\mistake_pet_idle_005.png" />
+    <EmbeddedResource Include="sprites\Pets\mistake\Idle_right\mistake_pet_idle_006.png" />
+    <EmbeddedResource Include="sprites\Pets\mistake\mistake_pet_idle_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="sprites\demonetization.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="sprites\Shine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="sprites\Scatedy-Cat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Arrow_in_the_knee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\BICEPS-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Bloodlust2-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Boiling_veins-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Crystal_SMASH-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Eagle_Eyes_Icon_New-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Euphoria-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Extra_Feet2-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Eyes_is_pregnant-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Gamma_Guts2-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Hammerhead-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Heavy_Heart-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Laser_brain-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Last_Wish_Icon_New-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Long_Arms2-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Lucky_shot-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\OpenMind-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Patience1-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Plutonium_Hunger2-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Rabbit_Paw2-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Racing_Mind2-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Rhino_Skin2-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Scarier_Face2-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Sharpteeth-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Shotgun_fingers-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Stress-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Strong_Spirit-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Throne_Butt2-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Vomit-export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\throne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneRooms\ThroneRoom.room" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\Idle\ntNPC_idle_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\Idle\ntNPC_idle_002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\Idle\ntNPC_idle_003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\Idle\ntNPC_idle_004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\Talk\ntNPC_talk_001.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\Talk\ntNPC_talk_002.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\Talk\ntNPC_talk_003.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\Talk\ntNPC_talk_004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\StartTalk\ntNPC_talk_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\StartTalk\ntNPC_talk_002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\StartTalk\ntNPC_talk_003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\StartTalk\ntNPC_talk_004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\DoEffect\ntNPC_talk_001.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\DoEffect\ntNPC_talk_002.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\DoEffect\ntNPC_talk_003.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\DoEffect\ntNPC_talk_004.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\DoEffect\ntNPC_talk_005.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\DoEffect\ntNPC_talk_006.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\DoEffect\ntNPC_talk_007.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\DoEffect\ntNPC_talk_008.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\DoEffect\ntNPC_talk_009.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\DoEffect\ntNPC_talk_010.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\DoEffect\ntNPC_talk_011.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\DoEffect\ntNPC_talk_012.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\DoEffect\ntNPC_talk_013.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\DoEffect\ntNPC_talk_014.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\DoEffect\ntNPC_talk_015.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\DoEffect\ntNPC_talk_016.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\DoEffect\ntNPC_talk_017.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\DoEffect\ntNPC_talk_018.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\DoEffect\ntNPC_talk_019.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\DoEffect\ntNPC_talk_020.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\DoEffect\ntNPC_talk_021.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\DoEffect\ntNPC_talk_022.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\DoEffect\ntNPC_talk_023.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\NPC\DoEffect\ntNPC_talk_024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Nuclear Talisman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Nuclear Talisman2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\CharacterIcons\Melting_icon1-export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\CharacterIcons\Chicken_icon2-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\CharacterIcons\Crystal_icon1-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\CharacterIcons\Eyes_icon1-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\CharacterIcons\Fish_icon1-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\CharacterIcons\Horror_icon1-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\CharacterIcons\Plant_icon1-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\CharacterIcons\Rebel_icon1-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\CharacterIcons\Robot_icon1-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\CharacterIcons\Steroids_icon1-export.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\CharacterIcons\Yv_icon1-export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\CharacterIcons\Rogue_icon2-export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyAppear_001.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyAppear_002.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyAppear_003.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyAppear_004.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyAppear_005.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyAppear_006.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyAppear_007.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyAppear_008.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyAppear_009.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyAppear_010.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyAppear_011.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyAppear_012.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyAppear_013.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyAppear_014.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyAppear_015.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyAppear_016.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyAppear_017.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyAppear_018.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyAppear_019.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyAppear_020.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyAppear_021.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyAppear_022.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyAppear_023.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyAppear_024.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyDead_001.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyDead_002.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyDead_003.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyDead_004.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyDead_005.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyDead_006.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyHurt_001.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyHurt_002.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyHurt_003.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyIdle_001.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyIdle_002.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyIdle_003.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyIdle_004.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyIdle_005.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyIdle_006.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyWalk_001.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyWalk_002.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyWalk_003.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyWalk_004.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyWalk_005.png" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\Ally\sprAllyWalk_006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="sprites\hax.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\char_shrine_temp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="sprites\Chlorophyte Rounds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_attack_left_001_.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_attack_left_002_.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_attack_left_003_.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_attack_left_004_.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_attack_right_001.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_attack_right_002.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_attack_right_003.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_attack_right_004.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_idle_left_001_.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_idle_left_002_.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_idle_left_003_.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_idle_left_004_.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_idle_right_001.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_idle_right_002.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_idle_right_003.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_idle_right_004.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_move_left_001_.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_move_left_002_.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_move_left_003_.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_move_left_004_.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_move_left_005_.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_move_left_006_.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_move_left_007_.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_move_left_008_.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_move_right_001.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_move_right_002.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_move_right_003.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_move_right_004.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_move_right_005.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_move_right_006.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_move_right_007.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_move_right_008.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_talk_left_001_.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_talk_left_002_.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_talk_left_003_.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_talk_right_001.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_talk_right_002.png" />
+    <EmbeddedResource Include="sprites\Pets\Junkan\lies\poopsack_sh_talk_right_003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\water_standard_base_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneRooms\proto_chest_room.room" />
+    <EmbeddedResource Include="rooms\breachHangout.room" />
+    <EmbeddedResource Include="rooms\bad.room" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\chest\proto_chest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NuclearThrone\Weapons\Bolt\" />
+    <Folder Include="NuclearThrone\Weapons\Energy\" />
+    <Folder Include="NuclearThrone\Weapons\Explosive\" />
+    <Folder Include="NuclearThrone\Weapons\Golden\" />
+    <Folder Include="NuclearThrone\Weapons\Melee\" />
+    <Folder Include="NuclearThrone\Weapons\Shell\" />
+    <Folder Include="NuclearThrone\Weapons\Ultra\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NuclearThrone\NuclearThroneSprite\halo_vfx_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="sprites\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="sprites\cosmic_sludge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="sprites\hmm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_chest_return_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_chest_return_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_chest_return_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_chest_return_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_die_vfx_001001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_die_vfx_001002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_die_vfx_001003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_die_vfx_001004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_die_vfx_001005.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_die_vfx_001006.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_die_vfx_001007.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_die_vfx_001008.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_die_vfx_001009.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_back_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_back_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_back_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_back_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_back_005.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_back_006.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_back_007.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_back_008.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_back_009.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_back_right_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_back_right_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_back_right_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_back_right_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_back_right_005.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_back_right_006.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_back_right_007.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_back_right_008.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_back_right_009.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_front_000.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_front_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_front_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_front_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_front_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_front_005.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_front_006.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_front_007.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_front_008.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_front_009.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_front_right_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_front_right_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_front_right_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_front_right_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_front_right_005.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_front_right_006.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_front_right_007.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_front_right_008.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_dodge_front_right_009.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_hand_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_back_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_back_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_back_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_back_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_back_hand_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_back_hand_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_back_hand_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_back_hand_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_back_right_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_back_right_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_back_right_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_back_right_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_back_right_twohand_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_back_right_twohand_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_back_right_twohand_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_back_right_twohand_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_back_twohand_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_back_twohand_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_back_twohand_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_back_twohand_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_front_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_front_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_front_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_front_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_front_hand_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_front_hand_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_front_hand_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_front_hand_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_front_right_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_front_right_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_front_right_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_front_right_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_front_right_hand_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_front_right_hand_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_front_right_hand_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_front_right_hand_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_front_right_twohand_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_front_right_twohand_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_front_right_twohand_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_front_right_twohand_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_front_twohand_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_front_twohand_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_front_twohand_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_idle_front_twohand_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_jetpack_back_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_jetpack_back_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_jetpack_back_right_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_jetpack_back_right_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_jetpack_front_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_jetpack_front_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_jetpack_front_hand_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_jetpack_front_hand_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_jetpack_front_right_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_jetpack_front_right_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_jetpack_front_right_hand_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_jetpack_front_right_hand_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_005.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_006.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_hand_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_hand_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_hand_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_hand_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_hand_005.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_hand_006.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_right_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_right_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_right_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_right_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_right_005.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_right_006.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_right_hand_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_right_hand_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_right_hand_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_right_hand_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_right_hand_005.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_right_hand_006.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_right_twohand_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_right_twohand_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_right_twohand_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_right_twohand_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_right_twohand_005.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_right_twohand_006.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_twohand_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_twohand_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_twohand_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_twohand_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_twohand_005.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_back_twohand_006.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_005.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_006.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_hand_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_hand_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_hand_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_hand_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_hand_005.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_hand_006.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_right_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_right_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_right_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_right_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_right_005.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_right_006.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_right_hand_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_right_hand_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_right_hand_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_right_hand_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_right_hand_005.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_right_hand_006.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_right_twohand_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_right_twohand_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_right_twohand_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_right_twohand_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_right_twohand_005.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_right_twohand_006.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_twohand_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_twohand_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_twohand_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_twohand_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_twohand_005.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_move_front_twohand_006.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_pet_right_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_pet_right_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_pitfall_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_pitfall_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_pitfall_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_pitfall_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_pitfall_005.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_pitfall_down_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_pitfall_down_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_pitfall_down_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_pitfall_return_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_pitfall_return_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_pitfall_return_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_pitfall_return_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_slide_altright_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_slide_right_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_slide_up_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_spinfall_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_spinfall_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_spinfall_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_spinfall_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_spinfall_005.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_spinfall_006.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_tablekick_back_right_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_tablekick_back_right_002-001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_tablekick_back_right_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_tablekick_back_right_hand_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_tablekick_front_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_tablekick_front_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_tablekick_front_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_tablekick_front_hand_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_tablekick_front_hand_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_tablekick_front_hand_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_tablekick_front_right_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_tablekick_front_right_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_tablekick_front_right_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_tablekick_front_right_hand_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_tablekick_front_right_hand_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_tablekick_front_right_hand_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_tarnisher_001.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_tarnisher_002.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_tarnisher_003.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_tarnisher_004.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_tarnisher_005.png" />
+    <EmbeddedResource Include="sprites\PlayerSprites\knight_tarnisher_006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="sprites\ping.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
